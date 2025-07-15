@@ -355,7 +355,7 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 {
     -qsc-icon-font: "font-awesome";
     -qsc-icon: "\f03e";
-    -qsc-icon-color: yellow;
+    -qsc-icon-color: rgb(226, 197, 31);
     text-align: center;
     padding: 10;
 }
