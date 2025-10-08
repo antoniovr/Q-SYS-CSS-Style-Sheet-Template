@@ -46,24 +46,29 @@ https://fontawesome.com/search?ic=free
     --icon-align: center;
     --text-align: center;
 
-    --button-color-off: rgb(217, 209, 198);
-    --text-color-off:rgb(101, 34, 45); 
-    --icon-color-off: rgb(101, 34, 45); 
-    --border-color-off: rgb(217, 209, 198);
+    --button-color-off: rgb(237, 237, 237);
+    --text-color-off:rgb(98, 61, 104); 
+    --icon-color-off: rgb(98, 61, 104); 
+    --border-color-off: rgb(237, 237, 237);
 
-    --button-color-on: rgb(101, 34, 45);
-    --text-color-on: rgb(217, 209, 198);
-    --icon-color-on: rgb(217, 209, 198);
-    --border-color-on: rgb(101, 34, 45);
+    --button-color-on: rgb(98, 61, 104);
+    --text-color-on: rgb(237, 237, 237);
+    --icon-color-on: rgb(237, 237, 237);
+    --border-color-on: rgb(98, 61, 104);
     
     --label-color-primary:rgb(74, 73, 73);
     --label-color-secondary: rgb(217, 209, 198); 
     
-    --icon-colored: rgb(101, 34, 45);
+    --icon-colored: rgb(98, 61, 104); 
     /*https://cssgradient.io/*/
     --fader-gradient: linear-gradient(0deg, rgb(5, 5, 5) 10%, rgb(235, 162, 5) 70%, rgb(255, 25, 0) 100%);
-    --base-var: rgb(255, 209, 214);
-    --end-var: rgb(255, 255, 255);
+    --base-var: rgb(98, 61, 104);
+    --end-var: rgb(134, 88, 141);
+
+    --background-color: rgb(228, 222, 233);
+    --button-border-radius: 6px;
+
+    --default-font-size: 40vh;
 }
 
 .icon-settings{-qsc-icon: "settings";-qsc-icon-font:material;-qsc-icon-color:var(--icon-color);-qsc-icon-align:var(--icon-align);}
@@ -129,28 +134,50 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 {
     background-color: var(--button-color-off);
     border: 1px;
+    border-radius: var(--button-border-radius);
     color: var(--text-color-off);
     -qsc-icon-color: var(--icon-color-off);
     border-color: var(--border-color-on);
     font-family: 'Montserrat';
 }
 
-
 .project-button
 {
-    background-color: var(--button-color-off);
+    background-color: white;
     border: 1px;
+    border-radius: var(--button-border-radius);
     color: var(--text-color-off);
     -qsc-icon-color: var(--icon-color-off);
+    border-color: var(--border-color-on);
+    font-family: 'Montserrat';
+}
+
+/* Pressed state is useful for trigger buttons, without it, it doesn't light when pressed */
+.project-button:pressed
+{
+    /*background-color: var(--button-color-on);
+    background: linear-gradient(to top left,var(--base-var), var(--end-var));
+    */
+    background: linear-gradient(90deg,var(--base-var), var(--end-var));
+    border: 1px;
+    border-radius: var(--button-border-radius);
+    color: var(--text-color-on);
+    
+    -qsc-icon-color: var(--icon-color-on);
     border-color: var(--border-color-on);
     font-family: 'Montserrat';
 }
 
 .project-button:value(1)
 {
-    background-color: var(--button-color-on);
+    /*background-color: var(--button-color-on);
+    background: linear-gradient(to top left,var(--base-var), var(--end-var));
+    */
+    background: linear-gradient(90deg,var(--base-var), var(--end-var));
     border: 1px;
+    border-radius: var(--button-border-radius);
     color: var(--text-color-on);
+    
     -qsc-icon-color: var(--icon-color-on);
     border-color: var(--border-color-on);
     font-family: 'Montserrat';
@@ -238,10 +265,29 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
   }
 
 
+textbox 
+{
+    color: var(--label-color-primary);
+    font-family: 'Montserrat';
+    border: none;
+    background: none;        
+    font-size: var(--default-font-size);
+}
+
+textblock
+{
+    color: var(--label-color-primary);
+    font-family: 'Montserrat';
+    border: none;
+    background: none;    
+    font-size: var(--default-font-size);
+}
+
 .project-label-primary
 {
     color: var(--label-color-primary);
     font-family: 'Montserrat';
+    font-size: var(--default-font-size);
     border: none;
     background: none;    
 }
@@ -250,6 +296,7 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 {
     color: var(--label-color-secondary);
     font-family: 'Montserrat';
+    font-size: var(--default-font-size);
     border: none;
     background: none;    
 }
@@ -278,6 +325,8 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 {
     background-color: rgb(97, 242, 145); 
     color: var(--text-color-off);
+    border: 1px;
+    border-radius: var(--button-border-radius);
     -qsc-icon-color: var(--icon-color-off);
     border-color: var(--border-color-on);
     font-family: 'Montserrat';
@@ -288,6 +337,8 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
     background-color: rgb(179, 0, 0); 
     color: var(--text-color-on);
     border-color: var(--border-color-on);
+    border: 1px;
+    border-radius: var(--button-border-radius);
     -qsc-icon-color: white;
     -qsc-icon: "volume-strike";
 }
@@ -362,7 +413,10 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 
 .background
 {
+    /*
     background-image: url('images/background4.jpg');
+    */
+    background-color: var(--background-color);
 }
 
 page{
@@ -374,5 +428,14 @@ page{
         to bottom right
     */
     /*background: linear-gradient(to top left,var(--base-var), var(--end-var));*/
-    background-image: url('images/background4.jpg');
+    background-color: var(--background-color);
+}
+
+.logo
+{
+    background-color: transparent;
+    border: none;
+    -qsc-border-stroke: 0px;
+    background-image: url('images/logo.png');
+
 }
