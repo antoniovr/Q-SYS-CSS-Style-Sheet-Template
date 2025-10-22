@@ -270,8 +270,8 @@ textbox
     color: var(--label-color-primary);
     font-family: 'Montserrat';
     border: none;
-    background: none;        
-    font-size: var(--default-font-size);
+    background: none;
+    /*font-size: var(--default-font-size);*/
 }
 
 textblock
@@ -280,14 +280,14 @@ textblock
     font-family: 'Montserrat';
     border: none;
     background: none;    
-    font-size: var(--default-font-size);
+    /*font-size: var(--default-font-size);*/
 }
 
 .project-label-primary
 {
     color: var(--label-color-primary);
     font-family: 'Montserrat';
-    font-size: var(--default-font-size);
+    /*font-size: var(--default-font-size);*/
     border: none;
     background: none;    
 }
@@ -296,7 +296,7 @@ textblock
 {
     color: var(--label-color-secondary);
     font-family: 'Montserrat';
-    font-size: var(--default-font-size);
+    /*font-size: var(--default-font-size);*/
     border: none;
     background: none;    
 }
