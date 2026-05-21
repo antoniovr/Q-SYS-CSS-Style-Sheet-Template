@@ -56,7 +56,7 @@ https://fontawesome.com/search?ic=free
     --icon-color-on: rgb(237, 237, 237);
     --border-color-on: rgb(98, 61, 104);
     
-    --label-color-primary:rgb(74, 73, 73);
+    --label-color-primary:rgb(37, 37, 37);
     --label-color-secondary: rgb(217, 209, 198); 
     
     --icon-colored: rgb(98, 61, 104); 
@@ -323,7 +323,7 @@ textblock
 
 .mute-button
 {
-    background-color: rgb(97, 242, 145); 
+    background-color: var(--button-color-off);
     color: var(--text-color-off);
     border: 1px;
     border-radius: var(--button-border-radius);
