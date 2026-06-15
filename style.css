@@ -1,8 +1,8 @@
 /* 
   * CSS Including Icon Styles
  * Based on CSS Created by K. Rhodus - QSC
- * Version 1.2
- * Antonio Vargas 2025
+ * Version 1.3
+ * Antonio Vargas 2026
 
   Look here for new icons to add (for -qsc-icon-font: material):
   https://fonts.google.com/icons
@@ -46,27 +46,27 @@ https://fontawesome.com/search?ic=free
     --icon-align: center;
     --text-align: center;
 
-    --button-color-off: rgb(237, 237, 237);
-    --text-color-off:rgb(98, 61, 104); 
-    --icon-color-off: rgb(98, 61, 104); 
-    --border-color-off: rgb(237, 237, 237);
+    --button-color-off: rgb(255, 255, 255);
+    --text-color-off:rgb(18, 43, 133); 
+    --icon-color-off: rgb(18, 43, 133); 
+    --border-color-off: rgb(255, 255, 255);
 
-    --button-color-on: rgb(98, 61, 104);
+    --button-color-on: rgb(18, 43, 133);
     --text-color-on: rgb(237, 237, 237);
     --icon-color-on: rgb(237, 237, 237);
-    --border-color-on: rgb(98, 61, 104);
+    --border-color-on: rgb(18, 43, 133);
     
     --label-color-primary:rgb(37, 37, 37);
-    --label-color-secondary: rgb(217, 209, 198); 
+    --label-color-secondary: rgb(255, 255, 255); 
     
-    --icon-colored: rgb(98, 61, 104); 
+    --icon-colored: rgb(18, 43, 133); 
     /*https://cssgradient.io/*/
     --fader-gradient: linear-gradient(0deg, rgb(5, 5, 5) 10%, rgb(235, 162, 5) 70%, rgb(255, 25, 0) 100%);
-    --base-var: rgb(98, 61, 104);
-    --end-var: rgb(134, 88, 141);
+    --base-var: rgb(18, 43, 133);
+    --end-var: rgb(18, 43, 133);
 
     --background-color: rgb(228, 222, 233);
-    --button-border-radius: 6px;
+    --button-border-radius: 1px;
 
     --default-font-size: 40vh;
 }
@@ -133,7 +133,7 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 .dummy-button
 {
     background-color: var(--button-color-off);
-    border: 1px;
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     color: var(--text-color-off);
     -qsc-icon-color: var(--icon-color-off);
@@ -143,8 +143,8 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
 
 .project-button
 {
-    background-color: white;
-    border: 1px;
+    background-color: var(--button-color-off);
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     color: var(--text-color-off);
     -qsc-icon-color: var(--icon-color-off);
@@ -159,7 +159,7 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
     background: linear-gradient(to top left,var(--base-var), var(--end-var));
     */
     background: linear-gradient(90deg,var(--base-var), var(--end-var));
-    border: 1px;
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     color: var(--text-color-on);
     
@@ -174,27 +174,13 @@ Keep coping icons that you are interested of from the Icons_Materials and Icons_
     background: linear-gradient(to top left,var(--base-var), var(--end-var));
     */
     background: linear-gradient(90deg,var(--base-var), var(--end-var));
-    border: 1px;
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     color: var(--text-color-on);
     
     -qsc-icon-color: var(--icon-color-on);
     border-color: var(--border-color-on);
     font-family: 'Montserrat';
-}
-
-.console-image
-{
-    border: 2px;
-}
-
-.console-image:value(1)
-{
-    border: 2px;
-    color: var(--text-color-on);
-    -qsc-icon-color: var(--icon-color-on);
-    border-color: var(--border-color-on);
-    font-family: 'Montserrat';    
 }
 
 .menu-button
@@ -325,7 +311,7 @@ textblock
 {
     background-color: var(--button-color-off);
     color: var(--text-color-off);
-    border: 1px;
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     -qsc-icon-color: var(--icon-color-off);
     border-color: var(--border-color-on);
@@ -337,7 +323,7 @@ textblock
     background-color: rgb(179, 0, 0); 
     color: var(--text-color-on);
     border-color: var(--border-color-on);
-    border: 1px;
+    border: var(--button-border-radius);
     border-radius: var(--button-border-radius);
     -qsc-icon-color: white;
     -qsc-icon: "volume-strike";
@@ -413,10 +399,10 @@ textblock
 
 .background
 {
+    background-image: url('images/background.png');
     /*
-    background-image: url('images/background4.jpg');
-    */
     background-color: var(--background-color);
+    */
 }
 
 page{
@@ -428,7 +414,10 @@ page{
         to bottom right
     */
     /*background: linear-gradient(to top left,var(--base-var), var(--end-var));*/
+    /*
     background-color: var(--background-color);
+    */
+    background-image: url('images/background.png');
 }
 
 .logo
